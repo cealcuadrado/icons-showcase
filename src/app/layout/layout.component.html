@@ -1,0 +1,392 @@
+<button
+  class="btn btn-primary mr-2"
+  [ngbPopover]="contentPopover"
+  popoverTitle="Popover"
+  placement="bottom"
+  triggers="hover">
+  Abrir Popup (Mouseenter/Mouseleave)
+</button>
+<button class="btn btn-primary mr-2"
+[ngbPopover]="contentPopover"
+popoverTitle="Popover"
+placement="bottom"
+  triggers="hover">
+  Abrir Popup (Hover)
+</button>
+<button class="btn btn-primary" (click)="openModal()">
+  Open Modal
+</button>
+
+<ng-template #contentPopover>
+  <p>Popover de prueba</p>
+</ng-template>
+
+<hr/>
+
+<div class="row text-uppercase">
+  <div class="col-12 col-md-6 mb-3">
+    <h3>Opción 1</h3>
+
+    <p>Uso de iconografía.</p>
+
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>VIF</div>
+        <div>
+          <i class="fa fa-check fa-fw text-success"></i>
+          <span [ngbPopover]="contentPopover" popoverTitle="Popover" placement="bottom" triggers="hover">
+             <i class="fa fa-eye fa-fw text-primary"></i>
+          </span>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          RPA
+        </div>
+        <div>
+          <i class="fa fa-times fa-fw text-danger"></i>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          Orden Detención Vigente
+        </div>
+        <div>
+          <i class="fa fa-check fa-fw text-success"></i>
+          <a href="#" (click)="openModal()">
+            <i class="fa fa-external-link text-primary fa-fw"></i>
+          </a>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>Litigantes deudores</div>
+        <div>
+          <i class="fa fa-check fa-fw text-success"></i>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-12 col-md-6 mb-3">
+    <h3>Opción 2</h3>
+
+    <p>Uso de iconografía con colores en el texto.</p>
+
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="text-success">
+          VIF
+        </div>
+        <div>
+          <i class="fa fa-check fa-fw text-success"></i>
+          <span [ngbPopover]="contentPopover" popoverTitle="Popover" placement="bottom" triggers="hover">
+            <i class="fa fa-eye fa-fw text-primary"></i>
+          </span>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="text-danger">
+          RPA
+        </div>
+        <div>
+          <i class="fa fa-times fa-fw text-danger"></i>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="text-success">
+          Orden Detención Vigente
+        </div>
+        <div>
+          <i class="fa fa-check fa-fw text-success"></i>
+          <a href="#" (click)="openModal()">
+            <i class="fa fa-external-link text-primary fa-fw"></i>
+          </a>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="text-success">Litigantes deudores</div>
+        <div>
+          <i class="fa fa-check fa-fw text-success"></i>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-12 col-md-6 mb-3">
+    <h3>Opción 3</h3>
+
+    <p>Se mantienen los elementos badges, pero se usa la iconografía para determinar si hay un elemento auxiliar.</p>
+
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>VIF</div>
+        <div>
+          <span class="badge badge-success">
+            Si
+          </span>
+          <span [ngbPopover]="contentPopover" popoverTitle="Popover" placement="bottom" triggers="hover">
+            <i class="fa fa-eye fa-fw text-primary"></i>
+          </span>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          RPA
+        </div>
+        <div>
+          <span class="badge badge-danger">
+            No
+          </span>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          Orden Detención Vigente
+        </div>
+        <div>
+          <span class="badge badge-success">
+            Si
+          </span>
+          <a href="#" (click)="openModal()">
+            <i class="fa fa-external-link text-primary fa-fw"></i>
+          </a>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>Litigantes deudores</div>
+        <div>
+          <i class="fa fa-check fa-fw text-success"></i>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-12 col-md-6 mb-3">
+    <h3>Opción 4</h3>
+
+    <p>Se mantienen los elementos badges, pero se usa la iconografía para determinar si hay un elemento auxiliar, y se usan los colores en el texto.</p>
+
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="text-success">
+          VIF
+        </div>
+        <div>
+          <span class="badge badge-success">
+            Si
+          </span>
+          <span [ngbPopover]="contentPopover" popoverTitle="Popover" placement="bottom" triggers="hover">
+            <i class="fa fa-eye fa-fw text-primary"></i>
+          </span>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="text-danger">
+          RPA
+        </div>
+        <div>
+          <span class="badge badge-danger">
+            No
+          </span>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="text-success">
+          Orden Detención Vigente
+        </div>
+        <div>
+          <span class="badge badge-success">
+            Si
+          </span>
+          <a href="#" (click)="openModal()">
+            <i class="fa fa-external-link text-primary fa-fw"></i>
+          </a>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="text-success">Litigantes deudores</div>
+        <div>
+          <i class="fa fa-check fa-fw text-success"></i>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-12 col-md-6 mb-3">
+    <h3>Opción 5</h3>
+
+    <p>Se usa la iconografía definida en la opción 1. Los íconos de Si/no se mantienen en los extremos. Cualquier elemento auxiliar está a la izquierda de ellos.</p>
+
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>VIF</div>
+        <div>
+          <span [ngbPopover]="contentPopover" popoverTitle="Popover" placement="bottom" triggers="hover">
+            <i class="fa fa-eye fa-fw text-primary"></i>
+          </span>
+          <i class="fa fa-check fa-fw text-success"></i>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          RPA
+        </div>
+        <div>
+          <i class="fa fa-times fa-fw text-danger"></i>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          Orden Detención Vigente
+        </div>
+        <div>
+          <a href="#" (click)="openModal()">
+            <i class="fa fa-external-link text-primary fa-fw"></i>
+          </a>
+          <i class="fa fa-check fa-fw text-success"></i>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>Litigantes deudores</div>
+        <div>
+          <i class="fa fa-check fa-fw text-success"></i>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-12 col-md-6 mb-3">
+    <h3>Opción 6</h3>
+
+    <p>Se usa la iconografía definida en la opción 1. Los íconos de Si/no se mantienen en los extremos. Cualquier
+      elemento auxiliar está a la izquierda de ellos. Se usan los colores en el texto.</p>
+
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="text-success">VIF</div>
+        <div>
+          <span [ngbPopover]="contentPopover" popoverTitle="Popover" placement="bottom" triggers="hover">
+            <i class="fa fa-eye fa-fw text-primary"></i>
+          </span>
+          <i class="fa fa-check fa-fw text-success"></i>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="text-danger">
+          RPA
+        </div>
+        <div>
+          <i class="fa fa-times fa-fw text-danger"></i>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="text-success">
+          Orden Detención Vigente
+        </div>
+        <div>
+          <a href="#" (click)="openModal()">
+            <i class="fa fa-external-link text-primary fa-fw"></i>
+          </a>
+          <i class="fa fa-check fa-fw text-success"></i>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="text-success">
+          Litigantes deudores
+        </div>
+        <div>
+          <i class="fa fa-check fa-fw text-success"></i>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-12 col-md-6 mb-3">
+    <h3>Opción 7</h3>
+
+    <p>La iconografía de Si/no se posiciona en en lado izquierdo, junto al texto. Cualquier acción que involucre a las condiciones va a estar en el lado derecho.</p>
+
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          <i class="fa fa-check fa-fw text-success"></i> VIF
+        </div>
+        <div>
+          <span [ngbPopover]="contentPopover" popoverTitle="Popover" placement="bottom" triggers="hover">
+            <i class="fa fa-eye fa-fw text-primary"></i>
+          </span>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          <i class="fa fa-times fa-fw text-danger"></i> RPA
+        </div>
+        <div>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+           <i class="fa fa-check fa-fw text-success"></i> Orden Detención Vigente
+        </div>
+        <div>
+          <a href="#" (click)="openModal()">
+            <i class="fa fa-external-link text-primary fa-fw"></i>
+          </a>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+           <i class="fa fa-check fa-fw text-success"></i> Litigantes deudores
+        </div>
+        <div>
+
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-12 col-md-6 mb-3">
+    <h3>Opción 8</h3>
+
+    <p>La iconografía de Si/no se posiciona en en lado izquierdo, junto al texto. Cualquier acción que involucre a las
+      condiciones va a estar en el lado derecho.</p>
+
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="text-success">
+          <i class="fa fa-check fa-fw"></i> VIF
+        </div>
+        <div>
+          <span [ngbPopover]="contentPopover" popoverTitle="Popover" placement="bottom" triggers="hover">
+            <i class="fa fa-eye fa-fw text-primary"></i>
+          </span>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="text-danger">
+          <i class="fa fa-times fa-fw"></i> RPA
+        </div>
+        <div>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="text-success">
+          <i class="fa fa-check fa-fw"></i> Orden Detención Vigente
+        </div>
+        <div>
+          <a href="#" (click)="openModal()">
+            <i class="fa fa-external-link text-primary fa-fw"></i>
+          </a>
+        </div>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div class="text-success">
+          <i class="fa fa-check fa-fw"></i> Litigantes deudores
+        </div>
+        <div>
+
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

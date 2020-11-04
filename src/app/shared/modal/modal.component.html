@@ -1,0 +1,17 @@
+<div class="modal-header">
+  <h3 class="modal-title">Modal Title</h3>
+  <button type="button" class="close" (click)="dismiss('Dismiss Modal by Close Button in Header')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <p>Modal de prueba</p>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-danger" (click)="dismiss('Dismiss Modal by Clase Button In Cancel')">
+    Cancel
+  </button>
+  <button class="btn btn-success" (click)="dismiss('Close Modal By OK Button')">
+    OK
+  </button>
+</div>
